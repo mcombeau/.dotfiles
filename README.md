@@ -1,6 +1,6 @@
 # Dotfiles
 
-An ever-evolving repository of dotfiles, quickly bootstrappable with [Dotbot][dotbot].
+An ever-evolving repository of dotfiles, quickly bootstrappable with [Dotbot](anishathalye/dotbot).
 
 ## Usage
 
