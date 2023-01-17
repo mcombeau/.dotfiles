@@ -16,7 +16,7 @@ Automatically set up the development environment with symbolic links to these do
 install
 ```
 
-To install the plugins for vim/neovim, open vim/neovim and run:
+To install the plugins for vim/neovim, open vim/neovim, run:
 
 ```vim
 :PlugInstall
