@@ -11,3 +11,4 @@ source ~/.bash/prompt.bash
 # ------	KEYBINDINGS
 bind -x '"\C- ":clear;'
 
+

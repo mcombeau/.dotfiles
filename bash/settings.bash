@@ -13,3 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 # export norminette path
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
+
+# install fuzzy finder
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
