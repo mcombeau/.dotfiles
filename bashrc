@@ -9,6 +9,8 @@ source ~/.shell/aliases.sh
 source ~/.bash/prompt.bash
 
 # ------	KEYBINDINGS
-bind -x '"\C- ":clear;'
+if [[ "$(set -o | grep 'emacs\|\bvi\b' | cut -f2 | tr '\n' ':')" != 'off:off:' ]]; then
+  bind -x '"\C- ":clear;'
+fi
 
 
