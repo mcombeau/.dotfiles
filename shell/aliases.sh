@@ -2,6 +2,9 @@
 alias ls='ls --color=auto'
 alias grep='grep --color'
 
+# open nvim when vim
+alias vim='nvim'
+
 # protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'

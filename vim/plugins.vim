@@ -2,12 +2,15 @@
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+if has('nvim')
+	let g:python3_host_prog="/usr/bin/python3"
 endif
 
 call plug#begin('~/.vim/plugged')
-
 	Plug '42Paris/42header'
 	Plug 'tpope/vim-commentary'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -17,16 +20,16 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'alligator/accent.vim'
 	Plug 'ntk148v/komau.vim'
-	Plug 'Ellana42/norminette_vim'
-	if has('nvim')
-		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	endif
+	" Plug 'Ellana42/norminette_vim'
+if has('nvim')
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+endif
 
 call plug#end()
 
 " ------	NORMINETTE
 
-source ~/.vim/plugged/norminette_vim/norminette.vim
+" source ~/.vim/plugged/norminette_vim/norminette.vim
 
 " ------	TREESITTER
 if has('nvim')
@@ -42,6 +45,8 @@ nnoremap <silent> <Leader>rg :Rg<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " ------	COC
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " Some servers have issues with backup files, see #649
 set nobackup
@@ -61,9 +66,9 @@ set signcolumn=yes
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config
 inoremap <silent><expr> <S-TAB>
-	\ coc#pum#visible() ? coc#pum#next(1) :
-	\ CheckBackspace() ? "\<Tab>" :
-	\ coc#refresh()
+			\ coc#pum#visible() ? coc#pum#next(1) :
+			\ CheckBackspace() ? "\<Tab>" :
+			\ coc#refresh()
 " inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
