@@ -12,6 +12,7 @@ lua << EOF
 			"make",
 			"markdown",
 			"typescript",
+			"tsx",
 			"lua",
 			"vim" },
 		highlight = { enable = true },

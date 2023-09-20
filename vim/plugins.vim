@@ -6,9 +6,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-if has('nvim')
-	let g:python3_host_prog="/usr/bin/python3"
-endif
+" if has('nvim')
+" 	let g:python3_host_prog="/usr/bin/python3"
+" endif
 
 call plug#begin('~/.vim/plugged')
 	Plug '42Paris/42header'
@@ -20,7 +20,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'alligator/accent.vim'
 	Plug 'ntk148v/komau.vim'
+	" Plug 'mcombeau/vim-twee-sugarcube'
+	Plug '~/.vim/plugged/vim-twee-sugarcube'
 	" Plug 'Ellana42/norminette_vim'
+	" Plug 'osamuaoki/vim-spell-under'
 if has('nvim')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
@@ -223,6 +226,7 @@ let g:accent_auto_cwd_colour = 0 " the default
 
 " re-apply the colorscheme
 colorscheme accent
+" colorscheme desert
 
 " ------	AIRLINE THEME
 
