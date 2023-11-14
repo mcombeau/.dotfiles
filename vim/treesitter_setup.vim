@@ -11,6 +11,7 @@ lua << EOF
 			"json",
 			"make",
 			"markdown",
+			"python",
 			"typescript",
 			"tsx",
 			"lua",

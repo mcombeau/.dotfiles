@@ -5,9 +5,15 @@ set noerrorbells visualbell t_vb=
 
 set number
 set relativenumber
-set nowrap
 set cursorline
 set numberwidth=6
+
+" ------	LINE WRAP
+set nowrap
+augroup WrapLineInFileTypes
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+augroup END
 
 " ------	SPACING/TABS
 
@@ -49,3 +55,4 @@ let g:mail42 = 'mcombeau@student.42.fr'
 " ------	PLUGINS
 
 source ~/.vim/plugins.vim
+source ~/.vim/coc.vim
