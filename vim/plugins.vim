@@ -13,6 +13,8 @@ endif
 call plug#begin('~/.vim/plugged')
 	Plug '42Paris/42header'
 	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-sensible'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}

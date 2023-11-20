@@ -4,7 +4,6 @@ set noerrorbells visualbell t_vb=
 " ------	LINE NUMBERS
 
 set number
-set relativenumber
 set cursorline
 set numberwidth=6
 
@@ -56,3 +55,5 @@ let g:mail42 = 'mcombeau@student.42.fr'
 
 source ~/.vim/plugins.vim
 source ~/.vim/coc.vim
+
+autocmd Filetype typescript let @c = "oconsole.log()\<Esc>i\"[\<C-r>%\<Esc>vhhdF/xdT[vUf.r lvUeli]:\",\<Esc>A;\<Esc>hi "
