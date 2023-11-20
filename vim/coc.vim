@@ -1,6 +1,6 @@
 scriptencoding utf-8
 let g:coc_user_config = get(g:, 'coc_user_config', {})
-let g:coc_global_extensions = get(g:, 'coc_global_extensions', ["coc-marketplace", "coc-pyright", "coc-prettier", "coc-tsserver"])
+let g:coc_global_extensions = get(g:, 'coc_global_extensions', ["coc-marketplace", "coc-pyright", "coc-prettier", "coc-tsserver", "coc-clangd"])
 let g:coc_selected_text = ''
 let g:coc_vim_commands = []
 let s:watched_keys = []
