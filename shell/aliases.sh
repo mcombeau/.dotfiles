@@ -22,7 +22,7 @@ alias gc='git commit'
 alias gpsh='git push'
 alias gpll='git pull'
 
-alias vi='vim'
+alias vi='nvim'
 # make directory and cd into it
 mcd() {
 	mkdir "${1}" && cd "${1}"

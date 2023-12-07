@@ -12,6 +12,15 @@ let s:select_api = exists('*nvim_select_popupmenu_item')
 let s:callbacks = {}
 let s:hide_pum = has('nvim-0.6.1') || has('patch-8.2.3389')
 
+nmap <leader>gc  <Plug>(coc-fix-current)
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s)
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
 function! coc#expandable() abort
   return coc#rpc#request('snippetCheck', [1, 0])
 endfunction

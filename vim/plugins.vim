@@ -22,8 +22,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'alligator/accent.vim'
 	Plug 'ntk148v/komau.vim'
-	" Plug 'mcombeau/vim-twee-sugarcube'
-	Plug '~/.vim/plugged/vim-twee-sugarcube'
+	Plug 'mcombeau/vim-twee-sugarcube'
 	" Plug 'Ellana42/norminette_vim'
 	" Plug 'osamuaoki/vim-spell-under'
 if has('nvim')
@@ -215,21 +214,21 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " g:accent_color or g:accent_colour changes the accent colour.
 " one of
-let g:accent_colour = 'cyan'
+ let g:accent_colour = 'cyan'
 
 " g:accent_darken makes the background and some text colours darker.
-let g:accent_darken = 0
+ let g:accent_darken = 0
 
 " g:accent_invert_status inverts the colour of the status line text.
-let g:accent_invert_status = 0
+ let g:accent_invert_status = 0
 
 " g:accent_auto_cwd_colour sets the accent colour using a hash of the current directory.
-let g:accent_auto_cwd_colour = 0 " the default
+ let g:accent_auto_cwd_colour = 0 " the default
 
 " re-apply the colorscheme
-colorscheme accent
+ colorscheme accent
 " colorscheme desert
 
 " ------	AIRLINE THEME
 
-let g:airline_theme='base16_black_metal'
+ let g:airline_theme='base16_ashes'
