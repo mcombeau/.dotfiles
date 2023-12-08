@@ -22,6 +22,8 @@ alias gc='git commit'
 alias gpsh='git push'
 alias gpll='git pull'
 
+alias py='python3'
+
 alias vi='nvim'
 # make directory and cd into it
 mcd() {
