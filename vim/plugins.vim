@@ -18,13 +18,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'alligator/accent.vim'
-	Plug 'ntk148v/komau.vim'
+	Plug 'itchyny/lightline.vim'
+	Plug 'norcalli/nvim-colorizer.lua'
 	Plug 'mcombeau/vim-twee-sugarcube'
+	Plug 'mcombeau/monosplash.vim'
 	" Plug 'Ellana42/norminette_vim'
-	" Plug 'osamuaoki/vim-spell-under'
 if has('nvim')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
@@ -210,25 +208,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" ------	ACCENT COLORSCHEME
+" ------	STYLE
+source ~/.vim/style.vim
 
-" g:accent_color or g:accent_colour changes the accent colour.
-" one of
- let g:accent_colour = 'cyan'
-
-" g:accent_darken makes the background and some text colours darker.
- let g:accent_darken = 0
-
-" g:accent_invert_status inverts the colour of the status line text.
- let g:accent_invert_status = 0
-
-" g:accent_auto_cwd_colour sets the accent colour using a hash of the current directory.
- let g:accent_auto_cwd_colour = 0 " the default
-
-" re-apply the colorscheme
- colorscheme accent
-" colorscheme desert
-
-" ------	AIRLINE THEME
-
- let g:airline_theme='base16_ashes'
+" ------	COLORIZER
+lua require'colorizer'.setup()
