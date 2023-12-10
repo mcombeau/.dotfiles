@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.bash', '~/.vim', '~/.shell']
 
 - link:
     ~/.bash: shell/bash/
