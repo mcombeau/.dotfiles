@@ -1,23 +1,31 @@
 set nocompatible
+
+filetype plugin indent on
+
+set noswapfile
 set noerrorbells visualbell t_vb=
+
 set termguicolors
 let base16colorspace=256
 set syntax=on
-filetype plugin indent on
 
 " ------	SEARCH
-
 set ignorecase
 set smartcase
 
-" ------	KEY MAPPING
+" ------	SPACING/TABS
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set cindent			" C auto indentation
 
+" ------	KEY MAPPING
+let mapleader=" "
 source ~/.vim/keymapping.vim
 
 " ------	PLUGINS
-
 source ~/.vim/plugins.vim
-source ~/.vim/coc.vim
 
 " ------	STYLE
 source ~/.vim/style.vim

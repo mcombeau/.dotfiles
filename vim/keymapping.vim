@@ -1,4 +1,3 @@
-let mapleader=" "
 set backspace=indent,eol,start
 nnoremap <Left>		:echoe "Use h"<CR>
 nnoremap <Right>	:echoe "Use l"<CR>

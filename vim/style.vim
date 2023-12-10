@@ -11,12 +11,6 @@ augroup WrapLineInFileTypes
     autocmd FileType markdown setlocal wrap
 augroup END
 
-" ------	SPACING/TABS
-
-set tabstop=4
-set cindent			" C auto indentation
-set shiftwidth=4	" Width for C auto indentation
-
 " ------	LIGHTLINE
 set noshowmode
 let g:lightline = {'colorscheme': 'monosplash'}
