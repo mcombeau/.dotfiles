@@ -16,8 +16,8 @@
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.zshrc: shell/zsh/zshrc
-    ~/.clang-format: vim/clang-format
-    ~/.config/nvim/coc-settings.json: vim/coc-settings.json
+    ~/.clang-format: vim/plugin.conf/clang-format
+    ~/.config/nvim/coc-settings.json: vim/plugin.conf/coc-settings.json
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
