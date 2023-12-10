@@ -53,6 +53,7 @@ alias t='tmux'
 
 # networking
 alias ports='netstat -tulanp'
+alias ping='ping -c 5'
 
 # reboot/shutdown/poweroff/halt
 alias reboot='sudo /sbin/reboot'
