@@ -26,14 +26,14 @@ call plug#end()
 
 " ------	TREESITTER
 if has('nvim')
-	source ~/.vim/treesitter_setup.vim
+	source ~/.vim/plugin.conf/treesitter_setup.vim
 endif
 
 " ------	FZF + RG
-source ~/.vim/fzf-rg.vim
+source ~/.vim/plugin.conf/fzf-rg.vim
 
 " ------	COC
-source ~/.vim/coc.vim
+source ~/.vim/plugin.conf/coc.vim
 
 " ------	COLORIZER
 lua require'colorizer'.setup()
