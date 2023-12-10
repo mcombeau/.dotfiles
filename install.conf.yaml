@@ -10,7 +10,7 @@
     ~/.bashrc:
     ~/.bash_profile:
     ~/.gitmux.conf:
-    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/init.vim: vim/init.vim
     ~/.shell:
     ~/.tmux.conf:
     ~/.vim:
