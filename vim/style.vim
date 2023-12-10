@@ -1,3 +1,21 @@
+" ------	LINE NUMBERS
+
+set number
+set cursorline
+set numberwidth=6
+
+" ------	LINE WRAP
+set nowrap
+augroup WrapLineInFileTypes
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+augroup END
+
+" ------	SPACING/TABS
+
+set tabstop=4
+set cindent			" C auto indentation
+set shiftwidth=4	" Width for C auto indentation
 
 " ------	LIGHTLINE
 set noshowmode
