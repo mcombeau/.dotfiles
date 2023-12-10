@@ -22,7 +22,7 @@ let g:monosplash_no_bg = 0
 if getcwd() =~ '42/ft_transcendance'
   let g:monosplash_color = 'cyan'
 endif
-if getcwd() =~ 'twee/voicless'
+if getcwd() =~ 'twee/voiceless'
   let g:monosplash_color = 'yellow'
 endif
 colorscheme monosplash
