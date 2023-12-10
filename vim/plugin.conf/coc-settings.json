@@ -3,12 +3,14 @@
 	"coc.preferences.formatOnSaveFiletypes": [
 		"c",
 		"cpp",
+		"css",
 		"python",
 		"markdown",
 		"javascript",
 		"typescript",
 		"typescriptreact",
-		"json"
+		"json",
+		"vim"
 	],
 	"prettier.useTabs": true,
 	"python.linting.enabled": true,
