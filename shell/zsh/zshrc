@@ -1,6 +1,8 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
+. /usr/share/autojump/autojump.sh
+
 /usr/bin/setxkbmap -option "caps:escape"
 source ~/.shell/aliases.sh
 path+=('/snap/bin')

@@ -9,6 +9,9 @@ source ~/.shell/aliases.sh
 # ------	PROMPT
 source ~/.bash/prompt.bash
 
+# ------	AUTOJUMP
+. /usr/share/autojump/autojump.sh
+
 # ------	KEYBINDINGS
 # if [[ "$(set -o | grep 'emacs\|\bvi\b' | cut -f2 | tr '\n' ':')" != 'off:off:' ]]; then
 #  bind -x '"\C- ":clear;'
