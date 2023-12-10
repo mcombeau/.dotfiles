@@ -6,17 +6,17 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.bash:
-    ~/.bashrc:
-    ~/.bash_profile:
-    ~/.gitmux.conf:
+    ~/.bash: shell/bash/
+    ~/.shell: shell/
+    ~/.bashrc: shell/bash/bashrc
+    ~/.bash_profile: shell/bash/bash_profile
+    ~/.gitmux.conf: shell/tmux/gitmux.conf
     ~/.config/nvim/init.vim: vim/init.vim
-    ~/.shell:
-    ~/.tmux.conf:
-    ~/.vim:
-    ~/.vimrc:
-    ~/.zshrc:
-    ~/.clang-format:
+    ~/.tmux.conf: shell/tmux/tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
+    ~/.zshrc: shell/zsh/zshrc
+    ~/.clang-format: vim/clang-format
     ~/.config/nvim/coc-settings.json: vim/coc-settings.json
 
 - shell:
