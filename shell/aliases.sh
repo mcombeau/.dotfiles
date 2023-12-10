@@ -61,4 +61,4 @@ alias halt='sudo /sbin/halt'
 alias shutdown='sudo /sbin/shutdown'
 
 # zoxide z alias
-alias z='j'
+alias j='z'
