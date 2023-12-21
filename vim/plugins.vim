@@ -36,4 +36,4 @@ source ~/.vim/plugin.conf/fzf-rg.vim
 source ~/.vim/plugin.conf/coc.vim
 
 " ------	COLORIZER
-lua require'colorizer'.setup()
+" lua require'colorizer'.setup()

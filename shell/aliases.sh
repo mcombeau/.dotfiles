@@ -34,9 +34,9 @@ alias grs='git restore --staged .'
 alias py='python3'
 
 # vim aliases
-alias vi='nvim'
-alias vim='nvim'
-alias edit='nvim'
+#alias vi='nvim'
+#alias vim='nvim'
+#alias edit='nvim'
 
 # make directory and cd into it
 mcd() {
