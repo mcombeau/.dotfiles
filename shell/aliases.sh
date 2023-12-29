@@ -24,8 +24,9 @@ alias gcl='git clone'
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch'
-alias gap='git add -p .'
+alias gap='git add -p'
 alias gc='git commit -m'
+alias gch='git checkout'
 alias gpsh='git push'
 alias gpll='git pull'
 alias grs='git restore --staged .'
@@ -63,3 +64,7 @@ alias shutdown='sudo /sbin/shutdown'
 
 # zoxide z alias
 alias j='z'
+
+# random things
+alias weather='curl wttr.in/Paris'
+alias browsh='docker run --rm -it browsh/browsh'
