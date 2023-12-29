@@ -22,3 +22,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # ------	Zoxide
 eval "$(zoxide init bash)"
+: undercover && export PS1='C:${PWD//\//\\\}> '

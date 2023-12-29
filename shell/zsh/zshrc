@@ -3,6 +3,7 @@
 
 /usr/bin/setxkbmap -option "caps:escape"
 source ~/.shell/aliases.sh
+source ~/.shell/secrets.sh
 path+=('/snap/bin')
 
 setopt autocd              # change directory just by typing its name
@@ -266,3 +267,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
+
+source ~/.dotfiles/shell/zsh/zplug.zsh
+: undercover && export PS1='C:${PWD//\//\\}> '
+: undercover && new_line_before_prompt=no
