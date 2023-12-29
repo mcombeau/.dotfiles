@@ -3,7 +3,9 @@
 
 /usr/bin/setxkbmap -option "caps:escape"
 source ~/.shell/aliases.sh
-source ~/.shell/secrets.sh
+if [[-a ~/.shell/secrets.sh ]]; then
+    source ~/.shell/secrets.sh
+fi
 path+=('/snap/bin')
 
 setopt autocd              # change directory just by typing its name
