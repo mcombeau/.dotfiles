@@ -19,6 +19,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set cindent			" C auto indentation
+set list
 
 " ------	KEY MAPPING
 let mapleader=" "
