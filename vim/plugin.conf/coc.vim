@@ -1,4 +1,5 @@
 scriptencoding utf-8
+
 let g:coc_user_config = get(g:, 'coc_user_config', {})
 let g:coc_global_extensions = get(g:, 'coc_global_extensions', ["coc-marketplace", "coc-pyright", "coc-prettier", "coc-tsserver", "coc-clangd", "@yaegassy/coc-tailwindcss3"])
 let g:coc_selected_text = ''
@@ -324,3 +325,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+nmap <silent> <leader>D <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>d <Plug>(coc-diagnostic-next)
+nmap <leader>ga  <Plug>(coc-codeaction)
+nmap <leader>gc  <Plug>(coc-fix-current)
