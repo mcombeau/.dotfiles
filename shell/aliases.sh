@@ -68,3 +68,6 @@ alias j='z'
 # random things
 alias weather='curl wttr.in/Paris'
 alias browsh='docker run --rm -it browsh/browsh'
+
+# livebook
+alias livebook='sudo docker run -p 8080:8080 -p 8081:8081 --pull always ghcr.io/livebook-dev/livebook'

@@ -3,9 +3,7 @@
 
 /usr/bin/setxkbmap -option "caps:escape"
 source ~/.shell/aliases.sh
-if [[-a ~/.shell/secrets.sh ]]; then
-    source ~/.shell/secrets.sh
-fi
+
 path+=('/snap/bin')
 
 setopt autocd              # change directory just by typing its name
@@ -270,6 +268,10 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(zoxide init zsh)"
 
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
 source ~/.dotfiles/shell/zsh/zplug.zsh
-: undercover && export PS1='C:${PWD//\//\\}> '
-: undercover && new_line_before_prompt=no
