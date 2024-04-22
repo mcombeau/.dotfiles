@@ -1,5 +1,7 @@
 set nocompatible
 
+set clipboard=unnamedplus
+
 filetype plugin indent on
 
 set noswapfile

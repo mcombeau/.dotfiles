@@ -5,6 +5,7 @@
 source ~/.shell/aliases.sh
 
 path+=('/snap/bin')
+path+=('/usr/local/go/bin')
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
