@@ -1,7 +1,12 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
-/usr/bin/setxkbmap -option "caps:escape"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    if command -v setxkbmap &>/dev/null; then
+        /usr/bin/setxkbmap -option "caps:escape"
+    fi
+fi
+
 source ~/.shell/aliases.sh
 
 path+=('/snap/bin')
