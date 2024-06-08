@@ -8,7 +8,15 @@ alias egrep='egrep --color'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
-alias rm='rm -I --preserve-root'
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    if command -v rm &>/dev/null; then
+        alias rm='rm -I --preserve-root'
+    fi
+else
+    if command -v rm &>/dev/null; then
+        alias rm='rm -I'
+    fi
+fi
 
 # ls aliases
 alias ll='ls -la'
