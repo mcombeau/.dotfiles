@@ -12,6 +12,7 @@
     ~/.bash_profile: shell/bash/bash_profile
     ~/.gitmux.conf: shell/tmux/gitmux.conf
     ~/.config/nvim/init.vim: vim/init.vim
+    ~/.pylintrc: pylintrc
     ~/.tmux.conf: shell/tmux/tmux.conf
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
