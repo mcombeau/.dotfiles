@@ -1,0 +1,9 @@
+[flake8]
+# Specify the max line length
+max-line-length = 88
+# Exclude files and directories
+exclude = .git,__pycache__,build,dist
+# Enable pep8-naming plugin
+extend-ignore = E203, E266, E501, W503, F401
+max-complexity = 18
+select = N8

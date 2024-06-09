@@ -13,6 +13,7 @@
     ~/.gitmux.conf: shell/tmux/gitmux.conf
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.pylintrc: pylintrc
+    ~/.config/flake8: flake8
     ~/.tmux.conf: shell/tmux/tmux.conf
     ~/.vim: vim
     ~/.vimrc: vim/vimrc

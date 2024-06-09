@@ -22,7 +22,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/cmp-path'            " Path completion source
         Plug 'hrsh7th/cmp-vsnip'           " Snippet completion source
         Plug 'hrsh7th/vim-vsnip'           " Snippet engine
-        " Plug 'nvimdev/lspsaga.nvim'
+        Plug 'nvimdev/lspsaga.nvim'
+        Plug 'ThePrimeagen/refactoring.nvim'
+        Plug 'nvim-lua/plenary.nvim'        " Required for refactoring.nvim
     endif
 	" Plug 'tpope/vim-surround'
 	" Plug 'norcalli/nvim-colorizer.lua'
@@ -43,6 +45,8 @@ source ~/.vim/plugin.conf/fzf-rg.vim
 " ------	LSP
 source ~/.vim/plugin.conf/lspconfig.vim
 source ~/.vim/plugin.conf/nvim-cmp.vim
+source ~/.vim/plugin.conf/lspsaga.vim
+source ~/.vim/plugin.conf/refactoring.vim
 
 " ------	THEME
 source ~/.vim/plugin.conf/monosplash.vim
