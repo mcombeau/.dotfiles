@@ -7,33 +7,43 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-	Plug '42Paris/42header'
-	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-sensible'
+	Plug 'tpope/vim-commentary'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'itchyny/lightline.vim'
-	Plug 'norcalli/nvim-colorizer.lua'
-	Plug 'mcombeau/vim-twee-sugarcube'
 	Plug 'mcombeau/monosplash.vim'
-if has('nvim')
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-endif
+    if has('nvim')
+	    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        Plug 'neovim/nvim-lspconfig'
+        Plug 'hrsh7th/nvim-cmp'            " Completion plugin
+        Plug 'hrsh7th/cmp-nvim-lsp'        " LSP completion source
+        Plug 'hrsh7th/cmp-buffer'          " Buffer completion source
+        Plug 'hrsh7th/cmp-path'            " Path completion source
+        Plug 'hrsh7th/cmp-vsnip'           " Snippet completion source
+        Plug 'hrsh7th/vim-vsnip'           " Snippet engine
+        " Plug 'nvimdev/lspsaga.nvim'
+    endif
+	" Plug 'tpope/vim-surround'
+	" Plug 'norcalli/nvim-colorizer.lua'
+	" Plug 'mcombeau/vim-twee-sugarcube'
+    
 
 call plug#end()
 
-" ------	TREESITTER
+" ------	COLORIZING
 if has('nvim')
 	source ~/.vim/plugin.conf/treesitter_setup.vim
 endif
+"lua require'colorizer'.setup()
 
 " ------	FZF + RG
 source ~/.vim/plugin.conf/fzf-rg.vim
 
-" ------	COC
-source ~/.vim/plugin.conf/coc.vim
+" ------	LSP
+source ~/.vim/plugin.conf/lspconfig.vim
+source ~/.vim/plugin.conf/nvim-cmp.vim
 
-" ------	COLORIZER
-lua require'colorizer'.setup()
+" ------	THEME
+source ~/.vim/plugin.conf/monosplash.vim
+source ~/.vim/plugin.conf/lightline.vim

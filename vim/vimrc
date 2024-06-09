@@ -1,31 +1,58 @@
-set nocompatible
+"Ensure that defaults.vim is always sourced
+unlet! skip_defaults_vim
 
+" Source the defaults.vim file to start from a known baseline
+if filereadable($VIMRUNTIME . "/defaults.vim")
+    source $VIMRUNTIME/defaults.vim
+endif
+
+" ------	KEY MAPPING
+" Set the leader key to space
+let mapleader=" "
+
+" Map <leader>c to open a terminal at the bottom-right corner
+nnoremap <leader>c :botright term<CR>
+
+" source ~/.vim/keymapping.vim
+
+" Use the system clipboard for all yank, delete, change, and put operations
 set clipboard=unnamedplus
 
+" Enable file type detection, load related plugins, and apply file type-specific indentation
 filetype plugin indent on
 
+" Disable the creation of swap files
 set noswapfile
+
+" Disable error bells and use visual bell instead (no screen flash)
 set noerrorbells visualbell t_vb=
 
-set termguicolors
-let base16colorspace=256
+" ------	COLORS + SYNTAX
+
+" Enable true color support if the terminal supports it
+if $COLORTERM == 'truecolor'
+  set termguicolors
+endif
+
+" Enable syntax highlighting
 set syntax=on
 
 " ------	SEARCH
-set ignorecase
-set smartcase
+set ignorecase   " Ignore case in search patterns
+set smartcase    " Override ignorecase if search pattern contains uppercase letters
+set hlsearch     " Highlight all matches of the search pattern
+set incsearch    " Show matches as you type the search pattern
 
-" ------	SPACING/TABS
-set autoindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set cindent			" C auto indentation
-set list
+" ------	INDENTATIONS
+set autoindent     " Automatically indent new lines to match the indentation of the previous line
+set expandtab      " Convert tabs to spaces
+set tabstop=4      " Set the number of spaces a tab counts for (used for display)
+set shiftwidth=4   " Set the number of spaces to use for each step of (auto)indent
 
-" ------	KEY MAPPING
-let mapleader=" "
-source ~/.vim/keymapping.vim
+set cindent        " Enable C/C++ style indentation
+
+set list           " Show hidden characters like tabs and end-of-line markers
+
 
 " ------	PLUGINS
 source ~/.vim/plugins.vim
