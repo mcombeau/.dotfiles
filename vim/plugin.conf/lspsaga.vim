@@ -2,7 +2,6 @@ lua << EOF
 local saga = require('lspsaga')
 
 saga.setup({
-  -- Other configurations you have set...
   use_saga_diagnostic_sign = true,
   code_action_icon = "💡",
   code_action_keys = {
